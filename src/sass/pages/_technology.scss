@@ -1,0 +1,76 @@
+@use '../abstracts' as *;
+
+.technology {
+  position: relative;
+  line-height: 2;
+
+  .bg-img {
+    position: relative;
+    min-height: 60vh;
+    background: $black url(../assets/img/tech-hero.jpg);
+    @include image-property(initial);
+    width: 100%;
+
+    @include medium {
+      min-height: 100vh;
+    }
+  }
+
+  &-content {
+    padding-top: 4rem;
+
+    @include medium {
+      padding-top: 8.5rem;
+    }
+  }
+
+  .quote {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    text-align: center;
+
+    @include medium {
+      padding: 0;
+    }
+
+    blockquote {
+      font-size: 1.3rem;
+      color: $light-clr;
+      margin-bottom: 1.5rem;
+      text-align: left;
+
+      @include medium {
+        font-size: 2rem;
+      }
+    }
+
+    p {
+      color: $light-clr;
+      font-size: 0.9rem;
+      text-align: left;
+      margin-bottom: 5rem;
+    }
+  }
+
+  &-text {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 4rem 1rem 4rem;
+
+    p {
+      color: $light-clr;
+      padding-bottom: 3rem;
+
+      @include medium {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  @include extra-large {
+    .image-slider {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}

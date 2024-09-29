@@ -1,0 +1,30 @@
+@use '../abstracts' as *;
+
+.win-lose {
+  padding-top: 8rem;
+  margin-bottom: 4rem;
+
+  .logo {
+    margin-bottom: 2rem;
+  }
+
+  .content {
+    text-align: center;
+    max-width: 800px;
+    margin-inline: auto;
+    color: $light-clr;
+
+    .img {
+      margin-bottom: 2rem;
+    }
+
+    p {
+      line-height: 2;
+      margin-bottom: 2rem;
+    }
+
+    .mt {
+      margin-top: 2rem;
+    }
+  }
+}

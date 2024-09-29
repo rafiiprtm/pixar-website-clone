@@ -1,0 +1,35 @@
+@use '../abstracts' as *;
+
+.menu-short,
+.menu-tech,
+.menu-careers,
+.menu-extra,
+.menu-about {
+  position: absolute;
+  width: 300px;
+  background-color: $primary-clr;
+  padding: 1rem 0;
+  padding-right: 1.5rem;
+
+  li:not(:last-child) {
+    margin-bottom: 0.3rem;
+  }
+
+  a {
+    color: $white;
+    letter-spacing: 1.5px;
+    font-size: 1rem;
+
+    &:hover {
+      color: rgba(255, 255, 255, 0.4);
+    }
+  }
+
+  &.clicked {
+    display: none;
+  }
+}
+
+.menu-about {
+  right: -9rem;
+}

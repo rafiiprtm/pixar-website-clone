@@ -1,0 +1,48 @@
+@use '../abstracts' as *;
+
+.home-content {
+  .cards {
+    @include medium {
+      @include flex(center, space-between);
+      gap: 2rem;
+      margin-bottom: 3rem;
+
+      img {
+        width: 304px;
+        height: 203px;
+        object-fit: cover;
+      }
+    }
+
+    .card {
+      a {
+        margin-bottom: 1.5rem;
+      }
+
+      h3 {
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 1rem;
+        letter-spacing: 3.5px;
+        color: $primary-clr;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 2.5rem;
+
+        @include medium {
+          margin-bottom: 0;
+        }
+      }
+
+      &:last-child {
+        margin-bottom: 4rem;
+
+        @include medium {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

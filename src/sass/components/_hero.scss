@@ -1,0 +1,35 @@
+@use '../abstracts' as *;
+
+#hero {
+  position: relative;
+  background: $black url(../assets/img/hero-image.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 60vh;
+  margin-bottom: 5rem;
+
+  @include medium {
+    min-height: 100vh;
+    margin-bottom: 7.5rem;
+  }
+
+  .content {
+    .hero-img {
+      position: absolute;
+      top: 70%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 300px;
+
+      @include landscape {
+        width: 450px;
+      }
+
+      @include medium {
+        width: 600px;
+      }
+    }
+  }
+}

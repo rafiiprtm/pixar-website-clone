@@ -1,0 +1,90 @@
+@use '../abstracts' as *;
+
+#footer-section {
+  padding-top: 4rem;
+  padding-inline: 1rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  max-width: 800px;
+  margin-inline: auto;
+
+  @include medium {
+    padding-top: 7.5rem;
+  }
+
+  .social-links {
+    margin-bottom: 3rem;
+    a {
+      color: $primary-clr;
+      font-size: $font-sz-350;
+      margin-left: 1rem;
+    }
+  }
+
+  .footer-links {
+    color: rgba(29, 29, 29, 0.3);
+    margin-bottom: 1rem;
+
+    a {
+      text-transform: uppercase;
+      font-weight: 300;
+      color: rgba(29, 29, 29, 0.8);
+      letter-spacing: 3.5px;
+      border-bottom: 1px solid rgba(29, 29, 29, 0.3);
+      transition: color 0.2s ease-in;
+
+      @include small {
+        font-size: 0.9rem;
+      }
+
+      @include extra-small {
+        font-size: 0.8rem;
+      }
+
+      &:hover {
+        color: $primary-clr;
+      }
+    }
+  }
+
+  .copyright {
+    text-transform: uppercase;
+    font-weight: 300;
+    color: rgba(29, 29, 29, 0.8);
+    letter-spacing: 3.5px;
+    margin-bottom: 2rem;
+
+    @include small {
+      font-size: 0.9rem;
+    }
+
+    @include extra-small {
+      font-size: 0.8rem;
+    }
+  }
+
+  .footer-btn {
+    border: 1px solid #68b631;
+    background-color: #f0f0f0;
+    color: #68b631;
+    padding: 0.875rem 2rem;
+    font-family: inherit;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    border-radius: 0.3rem;
+
+    @include small {
+      font-size: 0.9rem;
+    }
+
+    @include extra-small {
+      font-size: 0.8rem;
+    }
+
+    &:hover {
+      background-color: #68b631;
+      color: $white;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+@use '../abstracts' as *;
+
+.shortfilms {
+  position: relative;
+  line-height: 2;
+
+  .bg-img {
+    position: relative;
+    min-height: 60vh;
+    background: $black url(../assets/img/shortfilm-hero.jpg);
+    @include image-property(initial);
+    width: 100%;
+
+    @include medium {
+      min-height: 100vh;
+    }
+  }
+
+  &-content {
+    padding-top: 6rem;
+    color: $light-clr;
+
+    p:nth-of-type(1) {
+      margin-bottom: 1rem;
+    }
+
+    hr {
+      margin-top: 3rem;
+    }
+  }
+
+  .movie {
+    img {
+      cursor: pointer;
+      width: 197px;
+      height: 289px;
+      object-fit: cover;
+    }
+  }
+
+  @include extra-large {
+    &-movies {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}

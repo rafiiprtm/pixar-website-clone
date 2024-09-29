@@ -1,0 +1,31 @@
+@use '../abstracts' as *;
+
+.feature {
+  position: relative;
+
+  .bg-img {
+    position: relative;
+    min-height: 60vh;
+    background: $black url(../assets/img/feature-hero.jpg);
+    @include image-property(initial);
+    width: 100%;
+
+    @include medium {
+      min-height: 80vh;
+    }
+  }
+
+  .movie {
+    img {
+      width: 140px;
+      height: 197px;
+      object-fit: cover;
+      cursor: pointer;
+
+      @include medium {
+        width: 203px;
+        height: 295px;
+      }
+    }
+  }
+}
